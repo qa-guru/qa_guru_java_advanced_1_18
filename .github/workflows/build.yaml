@@ -16,10 +16,11 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
-          java-version: '8'
+          java-version: '11'
           cache: 'gradle'
-      - uses: malinskiy/action-android/install-sdk@release/0.1.3
-      - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.3
-        with:
-          cmd: ./gradlew integrationTest
-          api: 25
+      - run: ./gradlew integrationTest
+#      - uses: malinskiy/action-android/install-sdk@release/0.1.3
+#      - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.3
+#        with:
+#          cmd: ./gradlew integrationTest
+#          api: 25
