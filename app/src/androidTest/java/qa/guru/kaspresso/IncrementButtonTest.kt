@@ -8,7 +8,7 @@ import org.junit.Rule
 import org.junit.Test
 
 class IncrementButtonTest : TestCase(
-    kaspressoBuilder = Kaspresso.Builder.simple()
+    kaspressoBuilder = Kaspresso.Builder.withAllureSupport()
 ) {
 
     @get:Rule
