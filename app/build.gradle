@@ -15,7 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "com.kaspersky.kaspresso.runner.KaspressoRunner"
-        testInstrumentationRunnerArguments["clearPackageData"] = "true"
+//        testInstrumentationRunnerArguments["clearPackageData"] = "true"
     }
 
     buildTypes {
@@ -31,9 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    testOptions {
-        execution = 'ANDROIDX_TEST_ORCHESTRATOR'
-    }
+//    testOptions {
+//        execution = 'ANDROIDX_TEST_ORCHESTRATOR'
+//    }
 }
 
 dependencies {
