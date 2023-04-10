@@ -37,6 +37,8 @@ task downloadAllureResults(type: Exec) {
     commandLine 'adb', 'pull', '/sdcard/googletest/test_outputfiles/allure-results', './allure-results'
 }
 
+connectedCheck.finalizedBy 'downloadAllureResults'
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.9.0'
