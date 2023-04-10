@@ -34,7 +34,7 @@ android {
 
 task downloadAllureResults(type: Exec) {
     workingDir(rootDir)
-    commandLine 'adb', 'pull', '/sdcard/googletest/test_outputfiles/allure-results', './allure-results'
+    commandLine 'adb', '-s', 'emulator-5554' ,'pull', '/sdcard/googletest/test_outputfiles/allure-results', './allure-results'
 }
 
 connectedCheck.finalizedBy 'downloadAllureResults'

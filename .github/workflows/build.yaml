@@ -25,3 +25,4 @@ jobs:
           tag: default
           abi: x86
           api: 29
+      - run: printenv
