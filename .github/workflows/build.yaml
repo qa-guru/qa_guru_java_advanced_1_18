@@ -21,7 +21,7 @@ jobs:
       - uses: malinskiy/action-android/install-sdk@release/0.1.3
       - uses: malinskiy/action-android/emulator-run-cmd@release/0.1.3
         with:
-          cmd: ./gradlew :app:connectedCheck :app:downloadAllureResults
+          cmd: ./gradlew connectedCheck downloadAllureResults
           tag: default
           abi: x86
           api: 29
