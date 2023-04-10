@@ -15,7 +15,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "com.kaspersky.kaspresso.runner.KaspressoRunner"
-//        testInstrumentationRunnerArguments["clearPackageData"] = "true"
     }
 
     buildTypes {
@@ -31,10 +30,19 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-//    testOptions {
-//        execution = 'ANDROIDX_TEST_ORCHESTRATOR'
-//    }
 }
+
+task printDebug(type: Exec) {
+    workingDir(rootDir)
+    commandLine 'sh', './debug.sh'
+}
+
+task downloadAllureResults(type: Exec) {
+    workingDir(rootDir)
+    commandLine 'adb', 'pull', '/sdcard/googletest/test_outputfiles/allure-results', './allure-results'
+}
+
+connectedCheck.finalizedBy 'printDebug'
 
 dependencies {
 
