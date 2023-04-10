@@ -5,3 +5,6 @@
 # Gradle
 .gradle
 build
+
+# Allure
+allure-results
